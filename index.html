@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Password Protected Website</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  #login-container {
+    margin-top: 100px;
+  }
+</style>
+</head>
+<body>
+<div id="login-container">
+  <h2>Please enter the password to unlock the website</h2>
+  <input type="password" id="password">
+  <button onclick="unlock()">Unlock</button>
+  <p id="message"></p>
+</div>
+
+<script>
+  function unlock() {
+    var password = document.getElementById("password").value;
+    if (password === "12@3") {
+      window.location.href = "unlocked.html";
+    } else {
+      document.getElementById("message").innerText = "Incorrect password. Please try again.";
+    }
+  }
+</script>
+</body>
+</html
